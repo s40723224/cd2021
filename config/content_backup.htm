@@ -16,7 +16,11 @@
 <li><span style="background-color: #ffff99;">http-server.py</span> - 執行後會使用內建的 localhost 與 port 8444 伺服 content 子目錄中的 CMSiMDE 靜態網頁.</li>
 <li><span style="background-color: #ffff99;">cms.bat</span> - 讓使用者執行動態網站用的批次檔案.</li>
 <li><span style="background-color: #ffff99;">acp.bat</span> - 若使用者已經將倉儲設為 ssh 連線, 且提供遠端與近端的認證模式, 則可以在執行此批次指令之後加上提交字串, 即可執行 git add ., git commit -m "提交訊息", 以及 git push 等三個指令.</li>
-</ol><h1>CMSiMDE</h1>
+</ol>
+<p></p>
+<h2>0226(W1)</h2>
+<h2>0305(W2)</h2>
+<h2>0312(W3)</h2><h1>CMSiMDE</h1>
 <p>CMSiMDE (<a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a>) 是一套以 Python 與 Flask 框架編寫的網際內容管理系統,</p>
 <p>使用 CMSiMDE 建議使用者安裝 flask flask_cors bs4 lxml pelican markdown leo 等模組. 其中的 flask flask_cors bs4 lxml pelican markdown為啟動 CMSiMDE 的必要模組, 而 leo 則是 CMSMDE 開發者所使用的大綱管理工具, 可以用於與 CMSiMDE 整合的 Pelican blog 及 Reveal.js 網際簡報編輯之用.</p>
 <h2>基本操作</h2>
@@ -95,7 +99,7 @@ main() {
 <script src="https://embed.github.com/view/3d/mdecourse/cmstemplate/main/downloads/spikeball.stl"></script>
 </p>
 <p>以 CMSiMDE 內建的 static/viewstl.html 檢視 STL 檔案:</p>
-<p>使用 iframe 其 src 指向</p>
+<p>使用 iframe 其 src 指向 STL 檔案的絕對 URL 路徑:</p>
 <p>/static/viewstl.html?src=https://mde.tw/cmstemplate/downloads/spikeball.stl</p>
 <p>就可以如下檢視 downloads/spikeball.stl</p>
 <p><iframe height="400" src="/static/viewstl.html?src=https://mde.tw/cmstemplate/downloads/spikeball.stl" width="600"></iframe></p><h2>Gitlab 同步</h2>
