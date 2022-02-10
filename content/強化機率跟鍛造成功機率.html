@@ -1,0 +1,704 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>測試中</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">測試中</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='First.html'>First</a><li><a href='賽錢箱.html'>賽錢箱</a><li class='has-children'><a href='艾拉四分支.html'>艾拉四分支</a><ul class='dropdown'><li><a href='怪怪的.html'>怪怪的</a></li></ul><li class='has-children'><a href='往期時裝.html'>往期時裝</a><ul class='dropdown'><li><a href='毛茸茸兔子(201217~210114).html'>毛茸茸兔子(201217~210114)</a><li><a href='黑社總裁(210114~210210).html'>黑社總裁(210114~210210)</a><li><a href='甜蜜職人(210210~210311).html'>甜蜜職人(210210~210311)</a><li><a href='七彩綻放(210313~210415).html'>七彩綻放(210313~210415)</a></li></ul><li class='has-children'><a href='小工具.html'>小工具</a><ul class='dropdown'><li><a href='刻印石能力表.html'>刻印石能力表</a><li><a href='15襲擊.html'>15襲擊</a><li><a href='幻空之神.html'>幻空之神</a><li><a href='強化機率跟鍛造成功機率.html'>強化機率跟鍛造成功機率</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">幻空之神 << <a href='幻空之神.html'>Previous</a> <br /><h1>強化機率跟鍛造成功機率</h1>
+<p></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td nowrap="nowrap" rowspan="2" width="102">
+<p align="center"><b><span><span face="맑은 고딕" style="font-family: '맑은 고딕';">강화 단계</span></span></b></p>
+</td>
+<td colspan="5" nowrap="nowrap" width="428">
+<p align="center"><b><span><span face="맑은 고딕" style="font-family: '맑은 고딕';">확률</span></span></b></p>
+</td>
+<td nowrap="nowrap" rowspan="2" width="85">
+<p align="center"><b><span><span face="맑은 고딕" style="font-family: '맑은 고딕';">확률 합</span></span></b></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="78">
+<p align="center"><b><span><span face="맑은 고딕" style="font-family: '맑은 고딕';">성공</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><b><span><span face="맑은 고딕" style="font-family: '맑은 고딕';">파괴</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="95">
+<p align="center"><b><span><span face="맑은 고딕" style="font-family: '맑은 고딕';">변화 없음</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><b><span><span face="맑은 고딕" style="font-family: '맑은 고딕';">하락</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><b><span><span face="맑은 고딕" style="font-family: '맑은 고딕';">초기화</span></span></b></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="102">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0-&gt;1</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="78">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">100.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="95">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">100%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="102">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">1-&gt;2</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="78">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">100.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="95">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">100%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="102">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">2-&gt;3</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="78">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">90.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="95">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">10.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">100%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="102">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">3-&gt;4</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="78">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">80.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="95">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">20.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">100%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="102">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">4-&gt;5</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="78">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">70.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="95">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">30.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">100%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="102">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">5-&gt;6</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="78">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">60.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="95">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">40.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">100%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="102">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">6-&gt;7</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="78">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">20.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="95">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">80.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">100%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="102">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">7-&gt;8</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="78">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">5.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="95">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">15.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">30.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">50.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">100%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="102">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">8-&gt;9</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="78">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">2.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">20.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="95">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">10.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">28.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">40.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">100%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="102">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">9-&gt;10</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="78">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">1.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">25.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="95">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">7.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">27.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">40.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">100%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="102">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">10-&gt;11</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="78">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.7%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">35.3%</span></span></p>
+</td>
+<td nowrap="nowrap" width="95">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">7.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">27.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">30.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">100%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="102">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">11-&gt;12</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="78">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">1.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">25.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="95">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">7.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">27.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">40.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">100%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="102">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">12-&gt;13</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="78">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">1.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">29.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="95">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">3.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">27.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">40.0%</span></span></p>
+</td>
+<td nowrap="nowrap" width="85">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">100%</span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p align="left"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';"></span></span> </p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span><span face="맑은 고딕" style="font-family: '맑은 고딕';">재련 단계</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><b><span><span face="맑은 고딕" style="font-family: '맑은 고딕';">성공 확률</span></span></b></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0 -&gt; 1</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">12.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">1 -&gt; 2</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">10.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">2 -&gt; 3</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">6.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">3 -&gt; 4</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">10.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">4 -&gt; 5</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">8.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">5 -&gt; 6</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">4.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">6 -&gt; 7</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">8.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">7 -&gt; 8</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">5.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">8 -&gt; 9</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">2.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">9 -&gt; 10</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">6.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">10 -&gt; 11</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">3.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">11 -&gt; 12</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">1.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">12 -&gt; 13</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">5.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">13 -&gt; 14</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">2.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">14 -&gt; 15</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">1.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">15 -&gt; 16</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">3.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">16 -&gt; 17</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.50%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">17 -&gt; 18</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.25%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">18 -&gt; 19</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">3.00%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">19 -&gt; 20</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.50%</span></span></p>
+</td>
+</tr>
+<tr>
+<td nowrap="nowrap" width="109">
+<p align="center"><b><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">20 -&gt; 21</span></span></b></p>
+</td>
+<td nowrap="nowrap" width="111">
+<p align="center"><span lang="EN-US"><span face="맑은 고딕" style="font-family: '맑은 고딕';">0.25%</span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p></p>
+</div>
+</div>
+<p></p><br />幻空之神 << <a href='幻空之神.html'>Previous</a> </div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
